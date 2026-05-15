@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home_page</title>
+    <!-- css  -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>quiz app</h1>
+
+
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <div id="logo"><a href="index.html">
+                <\>SunByte
+            </a></div>
+        <!-- login button -->
+        <div id="login-btn">
+            <a href="login.html">Login</a>
+        </div>
+        <!-- sign up button -->
+        <div id="signup-btn">
+            <a href="signup.html">Sign Up</a>
+        </div>
+        <!-- navigation links toggle -->
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav" onclick="toggleMenu()">
+            <a href="">Home</a>
+            <a href="">connect</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section id="hero">
+        <h2>Welcome to</h2>
+        <h1>SunByte Quizzes</h1>
+    <p id="text"></p>
+    </section>
+
+    <!-- java script -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#text', {
+            strings: ['Your Ultimate Quiz Destination...', 'Challenge Your Knowledge...', 'Discover New Horizons...'],
+            typeSpeed: 40
+        });
+    </script>
 </body>
+
 </html>

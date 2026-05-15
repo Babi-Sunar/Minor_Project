@@ -1,3 +1,158 @@
-*{
-    background-color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #117373;
+    background: linear-gradient(0deg, rgba(17, 115, 115, 1) 0%, rgba(155, 127, 127, 1) 39%, rgba(194, 130, 130, 1) 62%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(194, 130, 130, 1);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* nav style */
+/* toggle nav */
+.menu-btn {
+    position: relative;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    width: 28px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+nav {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background: #f4a6a6;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003049;
+}
+
+.show {
+    display: flex;
+}
+
+/* login button style */
+#login-btn {
+    position: relative;
+    left: 17px
+}
+
+#login-btn a {
+    text-decoration: none;
+    color: #EEEEEE;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* signup button style */
+#signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    background-color: #FFC300;
+    position: relative;
+    left: 13px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#signup-btn a {
+    text-decoration: none;
+    color: #003049;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+}
+
+/* logo design */
+#logo a {
+    text-decoration: none;
+    text-align: center;
+    width: 30vw;
+    height: 8vw;
+    font-family: "Poppins", cursive;
+    font-weight: bold;
+    color: #FFC300;
+    font-size: 20px;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* hero section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#hero h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #8d6207;
+    font-weight: 900;
+}
+
+#hero h1 {
+    font-family: 'exo', cursive;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    color: #FFC300;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(72, 63, 51, 0.401) 0px 3px 6px;
+}
+
+#hero #text {
+    font-family: 'Poppins', sans-serif;
+    color: #ebf6ff;
+    font-weight: 500;
+    font-size: 18px;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(72, 63, 51, 0.401) 0px 3px 6px;
+    margin-bottom: 20px;
 }
