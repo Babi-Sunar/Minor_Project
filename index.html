@@ -34,9 +34,9 @@
         </div>
 
         <nav id="nav" onclick="toggleMenu()">
-            <a href="">Home</a>
-            <a href="">connect</a>
-            <a href="">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="#contact-section">Contact us</a>
+            <a href="#contact-section">Connect with us</a>
         </nav>
     </header>
 
@@ -44,7 +44,39 @@
     <section id="hero">
         <h2>Welcome to</h2>
         <h1>SunByte Quizzes</h1>
-    <p id="text"></p>
+        <p id="text"></p>
+    </section>
+
+    <!-- first section -->
+    <section id="first-section">
+        <div id="join-session">
+            <button onclick="joinSession()">Join Session</button>
+        </div>
+        <div id="create-session">
+            <button onclick="createSession()">Create Session</button>
+        </div>
+    </section>
+
+
+    <!-- contact section -->
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+        <div id="mail-phone">
+            <span>📞 +977 9866153193</span>
+            <span>📧 info@sunbytequizzes.com</span>
+        </div>
+        <div id="social-media">
+            <a href="https://www.facebook.com/bobby.sunar.3114"><img src="facebook.png" alt="facebook"
+                    class="contact-img" title="click to connect"
+                    style="background-color: rgba(12, 103, 188, 0.801);"></a>
+            <a href="https://www.linkedin.com/in/babi-sunar-17aa64287"><img src="linkedin.png" alt="linkedin"
+                    class="contact-img" title="click to connect" style="background-color: rgb(9, 104, 176);"></a>
+            <a href="https://wa.me/9779866153193"><img src="whatsapp.png" alt="whatsapp" class="contact-img"
+                    title="click to connect" style="background-color: rgba(3, 131, 20, 0.758);"></a>
+            <a
+                href="https://github.com/Babi-Sunar"><img
+                    src="git.png" alt="instagram" class="contact-img" title="click to connect"
+                    style="background-color: antiquewhite;"></a>
     </section>
 
     <!-- java script -->
@@ -52,8 +84,8 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#text', {
-            strings: ['Your Ultimate Quiz Destination...', 'Challenge Your Knowledge...', 'Discover New Horizons...'],
-            typeSpeed: 40
+            strings: ['Your Ultimate Quiz Destination...', 'Challenge Your Knowledge...', 'Discover New Horizons...', 'Join the Fun Today!'],
+            typeSpeed: 35
         });
     </script>
 </body>
