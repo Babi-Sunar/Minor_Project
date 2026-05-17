@@ -36,10 +36,13 @@
         <nav id="nav" onclick="toggleMenu()">
             <a href="index.html">Home</a>
             <a href="#contact-section">Contact us</a>
-            <a href="#contact-section">Connect with us</a>
+            <a href="#connect-section">Connect with us</a>
         </nav>
     </header>
 
+        <!-- horizontal line -->
+    <div id="horizontal-line"></div>
+    
     <!-- hero section -->
     <section id="hero">
         <h2>Welcome to</h2>
@@ -79,12 +82,47 @@
                     style="background-color: antiquewhite;"></a>
     </section>
 
+    <!-- connect form section  -->
+    <section id="connect-section">
+        <h2>Connect with Us</h2>
+        <form id="connect-form" onsubmit="return validateForm()">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button id="connect-form-btn" type="submit" onclick="connect_form_submit()">Send Message</button>
+        </form>
+        <p id="connect-text"></p>
+    </section>
+
+
+    <!-- horizontal line -->
+    <div id="horizontal-line"></div>
+    <!-- footer -->
+    <footer>
+        <div id="upper-footer">
+            <div id="footer-logo"><a href="index.html">
+                    <\>SunByte
+                </a></div>
+            <div id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="#contact-section">Contact us</a>
+                <a href="#connect-section">Connect with us</a>
+            </div>
+        </div>
+        <p id="lower-footer">&copy; 2026 SunByte Quizzes. All rights reserved.</p>
+    </footer>
     <!-- java script -->
     <script src="./script.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#text', {
             strings: ['Your Ultimate Quiz Destination...', 'Challenge Your Knowledge...', 'Discover New Horizons...', 'Join the Fun Today!'],
+            typeSpeed: 35
+        });
+    </script>
+    <script>
+        var typed = new Typed('#connect-text', {
+            strings: ['Be Connected, Stay Informed...', 'We Value Your Feedback...', 'Reach Out to Us Anytime...', 'Your Voice Matters to Us!'],
             typeSpeed: 35
         });
     </script>
