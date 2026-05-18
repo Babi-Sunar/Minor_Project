@@ -32,7 +32,9 @@ body {
         opacity: 0;
     }
 }
+
 header {
+    height: 25vw;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,6 +45,86 @@ header {
     background: rgba(194, 130, 130, 1);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+
+/* user settings style */
+/* toggle user settings */
+.settings-btn {
+    height: 15vw;
+    position: relative;
+    left: 8px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.settings-btn img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(60deg,
+            #ff6b6b,
+            #ffd93d,
+            #6bcBff,
+            #ff6b6b,
+            #ffd93d,
+            #6bcBff,
+            #ff6b6b,
+            #ff6b6b,
+            #ffd93d,
+            #6bcBff,
+            #ff6b6b,
+            #ffd93d,
+            #6bcBff,
+            #ff6b6b);
+    transition: smooth;
+    background-size: 300% 300%;
+    animation: moveColors 5s linear infinite;
+}
+
+@keyframes moveColors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.settings-btn span {
+    color: rgb(247, 234, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+nav #settings-nav {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background: #f4a6a6;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 10px;
+}
+
+#settings-nav a {
+    text-decoration: none;
+    color: #e9f7ff;
+}
+
 
 /* nav style */
 /* toggle nav */
@@ -82,48 +164,12 @@ nav a {
     color: #003049;
 }
 
+/* show */
+
 .show {
     display: flex;
 }
 
-/* login button style */
-#login-btn {
-    position: relative;
-    left: 17px
-}
-
-#login-btn a {
-    text-decoration: none;
-    color: #EEEEEE;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-/* signup button style */
-#signup-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 80px;
-    background-color: #FFC300;
-    position: relative;
-    left: 13px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-#signup-btn a {
-    text-decoration: none;
-    color: #003049;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 15px;
-}
 
 /* logo design */
 #logo a {
@@ -142,7 +188,7 @@ nav a {
 #hero {
     text-align: center;
     padding: 50px 20px;
-    height: 70vw;
+    height: 63vw;
 }
 
 #hero h2 {
@@ -272,7 +318,7 @@ nav a {
 #connect-section {
     scroll-snap-align: start;
     padding: 20px 20px;
-    height: 200vw;
+    height: 210vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,19 +443,17 @@ footer #lower-footer {
 }
 
 /* horizontal line */
-#horizontal-line  {
+#horizontal-line {
     height: 2px;
     border-radius: 16px;
-    background: linear-gradient(
-        90deg,
-        #ff6b6b,
-        #ffd93d,
-        #6bcBff,
-        #ff6b6b,
-        #ffd93d,
-        #6bcBff,
-        #ff6b6b
-    );
+    background: linear-gradient(90deg,
+            #ff6b6b,
+            #ffd93d,
+            #6bcBff,
+            #ff6b6b,
+            #ffd93d,
+            #6bcBff,
+            #ff6b6b);
     transition: smooth;
     background-size: 300% 300%;
     animation: moveColors 5s linear infinite;
