@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="./user_dashboard.css">
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <div id="logo"><a href="index.html">
+                <\>SunByte
+            </a></div>
+
+        <!-- user settings
+        <div id="user-settings" onclick="toggleSettings()">
+            <img src="user.png" alt="user" id="user-icon" >
+            <div id="username" >Babi Sunar</div>
+        </div>
+        <div id="user-settings-options" onclick="toggleSettings()">
+            <a href="logout.html">Logout</a>
+            <a href="delete_account.html">Delete Account</a>
+        </div> -->
+
+        <!-- user name image-->
+        <div class="settings-btn">
+            <img src="user_img.jpg" alt="user" id="user-icon">
+            <span id="username">user name</span>
+        </div>
+
+        <!-- navigation links toggle -->
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-class" id="nav" onclick="toggleMenu()">
+            <a href="index.html">Home</a>
+            <a href="#contact-section">Contact us</a>
+            <a href="#connect-section">Connect with us</a>
+            <a href="logout.html">Logout</a>
+            <a href="delete_account.html">Delete Account</a>
+        </nav>
+    </header>
+
+    <!-- horizontal line -->
+    <div id="horizontal-line"></div>
+
+    <!-- hero section -->
+    <section id="hero">
+        <h2>Welcome to</h2>
+        <h1>SunByte Quizzes</h1>
+        <p id="text"></p>
+    </section>
+
+    <!-- first section -->
+    <section id="first-section">
+        <div id="join-session">
+            <button onclick="joinSession()">Join Session</button>
+        </div>
+        <div id="create-session">
+            <button onclick="createSession()">Create Session</button>
+        </div>
+    </section>
+
+
+    <!-- contact section -->
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+        <div id="mail-phone">
+            <span>📞 +977 9866153193</span>
+            <span>📧 info@sunbytequizzes.com</span>
+        </div>
+        <div id="social-media">
+            <a href="https://www.facebook.com/bobby.sunar.3114"><img src="facebook.png" alt="facebook"
+                    class="contact-img" title="click to connect"
+                    style="background-color: rgba(12, 103, 188, 0.801);"></a>
+            <a href="https://www.linkedin.com/in/babi-sunar-17aa64287"><img src="linkedin.png" alt="linkedin"
+                    class="contact-img" title="click to connect" style="background-color: rgb(9, 104, 176);"></a>
+            <a href="https://wa.me/9779866153193"><img src="whatsapp.png" alt="whatsapp" class="contact-img"
+                    title="click to connect" style="background-color: rgba(3, 131, 20, 0.758);"></a>
+            <a href="https://github.com/Babi-Sunar"><img src="git.png" alt="instagram" class="contact-img"
+                    title="click to connect" style="background-color: antiquewhite;"></a>
+    </section>
+
+    <!-- connect form section  -->
+    <section id="connect-section">
+        <h2>Connect with Us</h2>
+        <form id="connect-form" onsubmit="return validateForm()">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button id="connect-form-btn" type="submit" onclick="connect_form_submit()">Send Message</button>
+        </form>
+        <p id="connect-text"></p>
+    </section>
+
+
+    <!-- horizontal line -->
+    <div id="horizontal-line"></div>
+    <!-- footer -->
+    <footer>
+        <div id="upper-footer">
+            <div id="footer-logo"><a href="index.html">
+                    <\>SunByte
+                </a></div>
+            <div id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="#contact-section">Contact us</a>
+                <a href="#connect-section">Connect with us</a>
+            </div>
+        </div>
+        <p id="lower-footer">&copy; 2026 SunByte Quizzes. All rights reserved.</p>
+    </footer>
+    <!-- java script -->
+    <script src="./user_dashboard.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#text', {
+            strings: ['Your Ultimate Quiz Destination...', 'Challenge Your Knowledge...', 'Discover New Horizons...', 'Join the Fun Today!'],
+            typeSpeed: 35
+        });
+    </script>
+    <script>
+        var typed = new Typed('#connect-text', {
+            strings: ['Be Connected, Stay Informed...', 'We Value Your Feedback...', 'Reach Out to Us Anytime...', 'Your Voice Matters to Us!'],
+            typeSpeed: 35
+        });
+    </script>
+</body>
+
+</html>
