@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
     <title>Login</title>
 </head>
+
 <body>
-    <h1>Login</h1>
+
+
+    <h2>Login</h2>
+
+    <form id="loginForm" action="#" method="post">
+        <div id="input-section">
+            <!-- email -->
+            <label id="email-label" for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="E-mail here..." autocomplete="off"
+                required><br><br>
+            <!-- password -->
+            <label id="password-label" for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Password here..."
+                autocomplete="new-password"><br><br>
+        </div>
+        <!-- remember me -->
+        <input type="checkbox" id="remember" name="remember">
+        <label id="remember-label" for="remember">Remember Me</label><br><br>
+
+        <!-- login button -->
+        <div id="login-btn-container">
+            <button id="login-btn" type="submit">Login</button><br><br>
+        </div>
+        <br><br>
+
+        <!-- forgot password -->
+        <a href="#" style="color: #003467c6; text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            ">Forgot Password?</a><br>
+
+        <!-- do not have account -->
+        <p style="color: rgb(236, 206, 172);text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            ">Don't have an account? <a href="signup.html"
+                style="color: #cc9d04;text-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">Sign
+                up</a></p>
+
+    </form>
+
+    <!-- script -->
+    <script src="./login.js"></script>
 </body>
+
 </html>
