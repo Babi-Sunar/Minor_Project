@@ -1,32 +1,41 @@
 const form = document.getElementById("loginForm");
 
+
 // form submit
 form.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent page reload
 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-    let remember = document.getElementById("remember").checked;
+    let rememberMe = document.getElementById("remember").checked;
 
-    if (email === "admin@gmail.com" && password === "1234") {
-        window.location.href = "user_dashboard.html";
-    } else {
-        alert("Invalid Email or Password");
+    // if no users
+    if (!localStorage.getItem("users")) {
+        alert("Sorry, no user found \nSign up first.");
+        return;
     }
-    if (remember) {
-        localStorage.setItem("loggedIn", "true");
-    } else {
-        sessionStorage.setItem("loggedIn", "true");
-    }
+    // fetch all users
+    let users = JSON.parse(localStorage.getItem("users"));
+    const existingUser = users.find(
+        user => user.email === email
+    );
 
+    if (existingUser) {
+        const matchPassword = users.find(
+            user => user.email === email && user.password === password
+        );
+        if (matchPassword) {
+            alert("login successful !");
+            name = users.find(user => user.email === email).name;
+            sessionStorage.setItem("username", name);
+            window.location.href = "user_dashboard.html";
+        }
+        else {
+            alert("Incorrect username or password !");
+        }
+    } else {
+        alert("Sorry, no user found \nSign up first.");
+        return;
+    }
 });
 
-window.onload = function () {
-    document.getElementById('email').value = "";
-    document.getElementById("password").value = "";
-};
-
-if (localStorage.getItem("loggedIn") === "true" ||
-    sessionStorage.getItem("loggedIn") === "true") {
-    window.location.href = "user_dashboard.html";
-}

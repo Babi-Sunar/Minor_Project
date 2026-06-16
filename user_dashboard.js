@@ -16,3 +16,5 @@ function connect_form_submit(){
         alert("🏆🎉Success! \n You've unlocked: 'Contact Form Completed' achievement. ");
     })
 }
+// setting user name 
+document.getElementById("username").innerText = sessionStorage.getItem("username");

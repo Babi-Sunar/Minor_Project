@@ -59,7 +59,7 @@ header {
     text-align: center;
     width: 30vw;
     height: 8vw;
-    font-family: "Poppins", cursive;
+    font-family: "Poppins",  sans-serif;
     font-weight: bold;
     color: #FFC300;
     font-size: 1.5rem;

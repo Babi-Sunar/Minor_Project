@@ -177,7 +177,7 @@ nav a {
     text-align: center;
     width: 30vw;
     height: 8vw;
-    font-family: "Poppins", cursive;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #FFC300;
     font-size: 20px;
@@ -198,7 +198,7 @@ nav a {
 }
 
 #hero h1 {
-    font-family: 'exo', cursive;
+    font-family: 'exo', sans-serif;
     font-weight: 900;
     font-style: normal;
     font-size: 40px;
@@ -426,7 +426,7 @@ footer #lower-footer {
     text-align: center;
     width: 30vw;
     height: 8vw;
-    font-family: "Poppins", cursive;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #FFC300;
     font-size: 20px;
